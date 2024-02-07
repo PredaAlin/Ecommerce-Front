@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 
 const StyledNav = styled.nav`
   ${(props) =>
-    props.mobileNavActive
+    props.mobilenavactive
       ? `
 display:block;
 
@@ -82,7 +82,7 @@ const Header = () => {
         <Center>
           <Wrapper>
             <Logo href={"/"}>Ecommerce</Logo>
-            <StyledNav mobileNavActive={mobileNavActive}>
+            <StyledNav mobilenavactive={mobileNavActive?"true":undefined}>
               <NavLink
                 onClick={() => setMobileNavActive((prev) => !prev)}
                 href={"/"}
