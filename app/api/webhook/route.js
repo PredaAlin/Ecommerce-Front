@@ -4,8 +4,6 @@ const stripe = require("stripe")(process.env.STRIPE_SK);
 import { buffer } from "micro";
 import { NextResponse } from "next/server";
 
-const endpointSecret =
-  "whsec_d65305dda312a81672966ab09ac16643585253e0ff140c68631b893c19f40f10";
 export async function POST(req, res) {
   const { method } = req;
   if (method === "POST") {
@@ -20,7 +18,7 @@ export async function POST(req, res) {
       event = stripe.webhooks.constructEvent(
         await req.text(),
         sig,
-        endpointSecret
+        process.env.ENDPOINT_SECRET
       );
     } catch (err) {
       return new Response(`Webhook Error: ${err.message}`, { status: 500 });
