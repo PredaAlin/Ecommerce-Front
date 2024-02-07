@@ -73,7 +73,7 @@ const ProductWhiteBox = ({ product }) => {
         <PriceRow>
           <Price>${product.price}</Price>
 
-          <Button block onClick={() => addProduct(product._id)} primary outline>
+          <Button block onClick={() => addProduct(product._id)} $primary="true" outline>
             Add to cart
           </Button>
         </PriceRow>

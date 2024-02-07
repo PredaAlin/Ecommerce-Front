@@ -58,14 +58,14 @@ ${(props) =>
     border: 1px solid #000;
   `}
 ${(props) =>
-  props.primary && !props.outline &&
+  props.$primary && !props.outline &&
   css`
     background-color:${primaryColor};
     border: 1px solid ${primaryColor};
     color: #fff;
   `}
 ${(props) =>
-  props.primary && props.outline &&
+  props.$primary && props.outline &&
   css`
     background-color: transparent;
     border: 1px solid ${primaryColor};
