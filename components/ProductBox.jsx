@@ -60,18 +60,18 @@ const Price = styled.div`
 
 const ProductWhiteBox = ({ product }) => {
   const { addProduct } = useContext(CartContext);
-  const url = "/products/" + product._id;
+  const url = "/products/" + product?._id;
   return (
     <ProductWrapper>
       <WhiteBox href={url}>
         <div>
-          <img src={product.images[0]} alt="" />
+          <img src={product?.images?.[0]} alt="" />
         </div>
       </WhiteBox>
       <ProductInfoBox>
-        <Title href={url}>{product.title}</Title>
+        <Title href={url}>{product?.title}</Title>
         <PriceRow>
-          <Price>${product.price}</Price>
+          <Price>${product?.price}</Price>
 
           <Button block onClick={() => addProduct(product._id)} $primary="true" outline>
             Add to cart

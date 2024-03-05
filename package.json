@@ -16,6 +16,7 @@
     "node": "^21.6.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-spinners": "^0.13.8",
     "stripe": "^14.15.0",
     "styled-components": "^6.1.8"
   },
